@@ -1,0 +1,891 @@
+[
+  {
+    "_id": {
+      "$numberInt": "1"
+    },
+    "name": "Thyroid Rule",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "lhs": "symptom",
+      "op": "IN",
+      "rhs": [
+        {
+          "name": "eye_dryness"
+        },
+        {
+          "name": "eye_irritation"
+        },
+        {
+          "name": "eye_puffiness"
+        },
+        {
+          "name": "eye_bulging"
+        },
+        {
+          "name": "skin_dryness"
+        },
+        {
+          "name": "skin_puffiness"
+        },
+        {
+          "name": "hair_loss"
+        },
+        {
+          "name": "hand_tremors"
+        }
+      ],
+      "weightage": 1
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "hyperthyroidism",
+        "overactive thyroid hypothyroidism",
+        "underactive thyroid hypopituitarism",
+        "underactive pituitary gland"
+      ],
+      "TESTS": [
+        "Thyroid stimulating hormone (TSH) test",
+        "T4 Test"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "2"
+    },
+    "name": "Thyroid Rule_1",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "lhs": "symptom",
+      "op": "IN",
+      "rhs": [
+        {
+          "name": "weight_changes"
+        },
+        {
+          "name": "insomnia"
+        },
+        {
+          "name": "anxiety"
+        },
+        {
+          "name": "fatigue"
+        },
+        {
+          "name": "weakness"
+        },
+        {
+          "name": "cold"
+        },
+        {
+          "name": "light_sensitivity"
+        },
+        {
+          "name": "menstrual_irregularity"
+        }
+      ],
+      "weightage": 1
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "hyperthyroidism",
+        "overactive thyroid hypothyroidism",
+        "underactive thyroid hypopituitarism",
+        "underactive pituitary gland"
+      ],
+      "TESTS": [
+        "Thyroid stimulating hormone (TSH) test",
+        "T4 Test"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "3"
+    },
+    "name": "Thyroid Rule_2",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "lhs": "symptom",
+      "op": "IN",
+      "rhs": [
+        {
+          "name": "anxiety"
+        },
+        {
+          "name": "Constipation"
+        },
+        {
+          "name": "menstrual_irregularity"
+        },
+        {
+          "name": "weakness"
+        },
+        {
+          "name": "fatigue"
+        },
+        {
+          "name": "hair_loss"
+        },
+        {
+          "name": "hand_tremors"
+        },
+        {
+          "name": "eye_irritation"
+        },
+        {
+          "name": "dry_skin"
+        },
+        {
+          "name": "weight_changes"
+        },
+        {
+          "name": "insomnia"
+        },
+        {
+          "name": "cold"
+        }
+      ],
+      "weightage": 1
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Hyperthyroidism",
+        "Hypopituitarism",
+        "primary or secondary hypothyroidism",
+        "thyrotoxic periodic paralysis"
+      ],
+      "TESTS": [
+        "T3 Test"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "4"
+    },
+    "name": "Viral Fever",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "2"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever",
+            "severity": "medium",
+            "frequency": "frequent",
+            "duration": "3-5 days"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "chills",
+            "severity": "high"
+          },
+          "weightage": 0.2
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "aches and pains"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "sweating"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "dehydration",
+            "frequency": "frequent"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "weakness"
+          },
+          "weightage": 0.2
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache"
+          },
+          "weightage": 0.1
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Viral Fever"
+      ],
+      "TESTS": [
+        "CBC - Complete Blood Count",
+        "Dengue Antibodies (IgG, IgM)"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "10"
+    },
+    "name": "COVID-19",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "2"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever",
+            "severity": ["medium","high"],
+            "frequency": "frequent",
+            "duration": "3-5 days"
+          },
+          "weightage": 0.20
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "cough",
+            "frequency": "frequent"
+          },
+          "weightage": 0.20
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fatigue"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "aches and pains"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "soar_throat"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "breath_shortness"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "runny_nose"
+          },
+          "weightage": 0.05
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "diarrhea"
+          },
+          "weightage": 0.05
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "COVID-19"
+      ],
+      "TESTS": [
+        "BioMedomics Rapid IgM-IgG Combined Antibody Test"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "11"
+    },
+    "name": "Cold",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "2"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "sneezing",
+            "frequency": "frequent"
+          },
+          "weightage": 0.18
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "aches and pains"
+          },
+          "weightage": 0.18
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "soar_throat"
+          },
+          "weightage": 0.18
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "runny_nose"
+          },
+          "weightage": 0.18
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "cough"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fatigue"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever"
+          },
+          "weightage": 0.04
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache"
+          },
+          "weightage": 0.04
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Cold"
+      ],
+      "TESTS": [
+        "CBC"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "12"
+    },
+    "name": "Flu",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "2"
+    },
+    "conditions": {
+      "all": [
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever",
+            "severity": ["medium","high"],
+            "duration": "3-5 days"
+          },
+          "weightage": 0.14
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "cough"
+          },
+          "weightage": 0.14
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fatigue"
+          },
+          "weightage": 0.14
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "aches and pains"
+          },
+          "weightage": 0.14
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache"
+          },
+          "weightage": 0.14
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "soar_throat"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "runny_nose"
+          },
+          "weightage": 0.1
+        },
+		{
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "diarrhea"
+          },
+          "weightage": 0.1
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Flu"
+      ],
+      "TESTS": [
+        "CBC"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "5"
+    },
+    "name": "General LifeStyle",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "lhs": "symptom",
+      "op": "IN",
+      "rhs": [
+        {
+          "name": "hereditary_high_cholesterol"
+        },
+        {
+          "name": "hereditary_heart_disease"
+        },
+        {
+          "name": "obesity",
+          "severity": "high"
+        },
+        {
+          "name": "alcohol_consumption"
+        },
+        {
+          "name": "smoking"
+        },
+        {
+          "name": "inactive_lifestyle"
+        },
+        {
+          "name": "diabetes"
+        },
+        {
+          "name": "kidney_disease"
+        }
+      ],
+      "weightage": 1
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Risk of developing high cholesterol"
+      ],
+      "TESTS": [
+        "Lipid Profile Test"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "6"
+    },
+    "name": "Dengue",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever",
+            "severity": "high",
+            "frequency": "frequent",
+            "duration": "more than 5 days"
+          },
+          "weightage": 0.5
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache",
+            "severity": "high",
+            "frequency": "frequent"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "muscle_pain",
+            "severity": "high"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "skin_rash"
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "vomiting",
+            "severity": [
+              "medium",
+              "high"
+            ]
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "bleeding_gum",
+            "severity": "low"
+          },
+          "weightage": 0.05
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "bleeding_nose",
+            "severity": "low"
+          },
+          "weightage": 0.05
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Dengue"
+      ],
+      "TESTS": [
+        "Dengue Antibodies (IgG, IgM)",
+        "Dengue Virus by PCR"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "7"
+    },
+    "name": "Malaria",
+    "type": "SYMPTOM",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "fever",
+            "severity": "medium",
+            "frequency": "frequent",
+            "duration": "more than 5 days"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "headache",
+            "severity": "high",
+            "frequency": "frequent"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "muscle_pain",
+            "severity": "high"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "diarrhea"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "vomiting",
+            "severity": [
+              "medium",
+              "high"
+            ]
+          },
+          "weightage": 0.1
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "sweating",
+            "severity": "high"
+          },
+          "weightage": 0.05
+        },
+        {
+          "lhs": "symptom",
+          "op": "equals",
+          "rhs": {
+            "name": "convulsions",
+            "severity": "low"
+          },
+          "weightage": 0.05
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Malaria"
+      ],
+      "TESTS": [
+        "Thick and thin blood smear",
+        "Rapid diagnostic test(RDT) or Antigen"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "8"
+    },
+    "name": "Dengue",
+    "type": "TEST_REPORT",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "IgM",
+          "op": "gt",
+          "rhs": {
+            "$numberInt": "286"
+          },
+          "weightage": 0.4
+        },
+        {
+          "lhs": "IgG",
+          "op": "gt",
+          "rhs": {
+            "$numberInt": "1600"
+          },
+          "weightage": 0.3
+        },
+        {
+          "lhs": "Platelet",
+          "op": "lt",
+          "rhs": {
+            "$numberInt": "50000"
+          },
+          "weightage": 0.3
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Dengue"
+      ],
+      "Medicines": [
+        "Biotrex Carica Papaya Leaf Extract 500mg Capsule - 0-0-1 - 5 days"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "9"
+    },
+    "name": "Hepatitis A",
+    "type": "TEST_REPORT",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "IgM",
+          "op": "gt",
+          "rhs": {
+            "$numberInt": "400"
+          },
+          "weightage": 0.25
+        },
+        {
+          "lhs": "IgG",
+          "op": "gt",
+          "rhs": {
+            "$numberInt": "1600"
+          },
+          "weightage": 0.5
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Hepatitis A"
+      ],
+      "Medicines": [
+        "GamaSTAN S / D"
+      ]
+    }
+  },
+  {
+    "_id": {
+      "$numberInt": "10"
+    },
+    "name": "Viral Fever",
+    "type": "TEST_REPORT",
+    "priority": {
+      "$numberInt": "1"
+    },
+    "conditions": {
+      "all": [
+        {
+          "lhs": "WBC",
+          "op": "gt",
+          "rhs": {
+            "$numberInt": "9600"
+          },
+          "weightage": 0.4
+        },
+        {
+          "lhs": "RBC",
+          "op": "lte",
+          "rhs": {
+            "$numberInt": "4320000"
+          },
+          "weightage": 0.2
+        },
+        {
+          "lhs": "Platelet",
+          "op": "lt",
+          "rhs": {
+            "$numberInt": "150000"
+          },
+          "weightage": 0.4
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Viral Fever"
+      ],
+      "Medicines": [
+        "paracip 500"
+      ]
+    }
+  }
+]

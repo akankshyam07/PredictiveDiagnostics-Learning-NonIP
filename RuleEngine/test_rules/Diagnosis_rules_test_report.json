@@ -1,0 +1,104 @@
+[
+  {
+    "id" : 8,
+    "name": "Dengue",
+    "type" : "TEST_REPORT",
+    "priority" : 1,
+    "conditions": {
+      "all": [
+        {
+          "lhs": "IgM",
+          "op": "gt",
+          "rhs": 286,
+          "weightage": 0.4
+        },
+        {
+          "lhs": "IgG",
+          "op": "gt",
+          "rhs": 1600,
+          "weightage": 0.3
+        },
+        {
+          "lhs": "Platelet",
+          "op": "lt",
+          "rhs": 50000,
+          "weightage": 0.3
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Dengue"
+      ],
+      "Medicines": [
+        "Biotrex Carica Papaya Leaf Extract 500mg Capsule - 0-0-1 - 5 days"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Hepatitis A",
+    "type": "TEST_REPORT",
+    "priority": 1,
+    "conditions": {
+      "all": [
+        {
+          "lhs": "IgM",
+          "op": "gt",
+          "rhs": 400,
+          "weightage": 0.25
+        },
+        {
+          "lhs": "IgG",
+          "op": "gt",
+          "rhs": 1600,
+          "weightage": 0.5
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Hepatitis A"
+      ],
+      "Medicines": [
+        "GamaSTAN S / D"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "name": "Viral Fever",
+    "type": "TEST_REPORT",
+    "priority": 1,
+    "conditions": {
+      "all": [
+        {
+          "lhs": "WBC",
+          "op": "gt",
+          "rhs": 9600,
+          "weightage": 0.4
+        },
+        {
+          "lhs": "RBC",
+          "op": "lte",
+          "rhs": 4320000,
+          "weightage": 0.2
+        },
+        {
+          "lhs": "Platelet",
+          "op": "lt",
+          "rhs": 150000,
+          "weightage": 0.4
+        }
+      ]
+    },
+    "actions": {
+      "PROBABLE_DISEASE": [
+        "Viral Fever"
+      ],
+      "Medicines": [
+        "paracip 500"
+      ]
+    }
+  }
+]

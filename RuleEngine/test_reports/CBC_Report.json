@@ -1,0 +1,9 @@
+{
+  "test_name": "Complete Blood Count",
+  "Hemoglobin": 14,
+  "RBC": 4500000,
+  "WBC": 10000,
+  "Hematocrit": 42.4,
+  "Platelet": 30000,
+  "patient_id": 1
+}
