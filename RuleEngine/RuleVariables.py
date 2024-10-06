@@ -1,3 +1,10 @@
+"""
+Rajani Vanarse
+Akankshya Mohanty
+"""
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
 from business_rules.variables import BaseVariables, select_rule_variable
 
 

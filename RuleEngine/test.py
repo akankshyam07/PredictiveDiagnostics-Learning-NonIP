@@ -1,3 +1,10 @@
+"""
+Rajani Vanarse
+Akankshya Mohanty
+"""
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
 import RuleExecutor, Mongo_config
 from Recommendation import Recommendation
 from RuleConstants import RuleConstants

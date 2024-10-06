@@ -1,3 +1,10 @@
+"""
+Rajani Vanarse
+Akankshya Mohanty
+"""
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
 from RuleConstants import RuleConstants
 from operators import StringType, NumericType, BooleanType, ListType, DictType
 import json

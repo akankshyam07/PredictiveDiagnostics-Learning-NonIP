@@ -1,3 +1,10 @@
+"""
+Rajani Vanarse
+Akankshya Mohanty
+"""
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
 from pymongo import MongoClient
 from RuleEngine import Mongo_config
 from RuleEngine.RuleConstants import RuleConstants

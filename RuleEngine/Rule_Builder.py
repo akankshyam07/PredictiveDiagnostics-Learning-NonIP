@@ -1,3 +1,10 @@
+"""
+Rajani Vanarse
+Akankshya Mohanty
+"""
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
 import json
 
 class Rule_Builder:
