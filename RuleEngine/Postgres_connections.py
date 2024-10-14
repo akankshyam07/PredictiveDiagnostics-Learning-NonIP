@@ -1,3 +1,10 @@
+"""
+Author: Akankshya Mohanty
+Mentor & Reviewer: Rajani Vanarse
+#*******************************************************************
+#Copyright (C) 2023 Adino Labs
+#*******************************************************************
+"""
 import psycopg2
 import json
 

@@ -1,10 +1,10 @@
 """
-Rajani Vanarse
-Akankshya Mohanty
-"""
+Author: Akankshya Mohanty
+Mentor & Reviewer: Rajani Vanarse
 #*******************************************************************
 #Copyright (C) 2023 Adino Labs
 #*******************************************************************
+"""
 import enum
 
 

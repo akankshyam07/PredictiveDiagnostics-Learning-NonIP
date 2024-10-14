@@ -1,10 +1,10 @@
 """
-Rajani Vanarse
-Akankshya Mohanty
-"""
+Author: Akankshya Mohanty
+Mentor & Reviewer: Rajani Vanarse
 #*******************************************************************
 #Copyright (C) 2023 Adino Labs
 #*******************************************************************
+"""
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_TEXT
 
